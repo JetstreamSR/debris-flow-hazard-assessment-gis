@@ -101,9 +101,7 @@ The final pattern was compared with documented locations affected during the 17 
 
 ## Repository scope and data availability
 
-This repository is a public portfolio record of the thesis. It contains a method summary, selected project figures, and the final model output. Raw source datasets, editable Google Earth and ArcGIS project files, and the full thesis are not included.
-
-Dataset citations and availability are listed in [`DATA_SOURCES.md`](DATA_SOURCES.md). Additional academic materials are available from the author on request.
+This repository is a public portfolio record of the thesis. It contains a method summary, selected project figures, and the final model output. Raw source datasets, editable Google Earth and ArcGIS project files, and the full thesis are not included. Additional academic materials are available from the author on request.
 
 ## Thesis information
 
