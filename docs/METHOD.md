@@ -83,3 +83,5 @@ The classification table was joined to the 18-feature sub-catchment layer. ArcGI
 ## Result boundary
 
 The output is a relative hazard classification for this case study. Comparison with the documented 2020 event provides a spatial consistency check, but it does not constitute an independent predictive validation or a general-purpose operational warning model.
+
+The detailed indicator table and source geospatial layers are not part of the public release. Several archived layers lack recoverable provider or redistribution records, and the thesis acknowledgement states that most raw data were supplied by a senior student for the academic project. See [`../DATA_SOURCES.md`](../DATA_SOURCES.md) for the provenance audit.
