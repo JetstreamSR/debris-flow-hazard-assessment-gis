@@ -4,9 +4,7 @@ Undergraduate thesis project in Geographic Information Science at Southwest Jiao
 
 This project assessed relative debris-flow hazard across 18 sub-catchments in the Meilonggou watershed, Danba County, Sichuan, China. The main work was a practical GIS workflow: inspecting the terrain in Google Earth Pro, delineating and transferring catchment units, organizing multi-source data in ArcGIS, calculating nine spatial indicators, and producing a final hazard map.
 
-![Schematic of the final debris-flow hazard classification](docs/images/hazard-classification.png)
-
-The public figures are redrawn schematics of the author's assessment units and final classes. They do not reproduce the satellite imagery, DEM, geological layer, or other source rasters used in the thesis.
+![Final debris-flow hazard classification](docs/images/hazard-classification.png)
 
 ## What I did
 
@@ -22,7 +20,9 @@ The public figures are redrawn schematics of the author's assessment units and f
 
 ### 1. Establish the study area
 
-Administrative boundaries, satellite imagery, and watershed data were assembled to locate Meilonggou within Danba County. These source layers are not included here because their original download records and redistribution terms could not be recovered from the archived project.
+Administrative boundaries, satellite imagery, and watershed data were assembled to locate Meilonggou within Danba County. The source layers are not included in this repository.
+
+![Study-area location within Danba County](docs/images/study-area-location.png)
 
 ### 2. Extract and visually check the drainage network
 
@@ -30,17 +30,21 @@ An initial drainage network was extracted in ArcGIS. Landsat 8 imagery provided 
 
 The ArcGIS drainage and watershed layers were exported with the **Layer To KML** workflow for inspection in Google Earth Pro. The seven main gullies were numbered and their boundaries were refined with reference to terrain relief, channel direction, and tributary connections.
 
-Google Earth Pro was used as a visual interpretation and verification environment. Screenshots are omitted from this public portfolio because Google Earth imagery has separate attribution and promotional-use restrictions.
+Google Earth Pro was used as a visual interpretation and verification environment. Raw imagery and editable project files are not included in this repository.
+
+![Three main gullies reviewed in Google Earth Pro](docs/images/google-earth-gully-review.png)
 
 ### 3. Delineate 18 sub-catchments and return them to ArcGIS
 
 Each main gully was subdivided to identify more precise assessment units. The interpreted polygons were saved as KMZ, imported with **KML To Layer**, converted to geodatabase feature classes, and checked as a single 18-feature polygon layer. Unit identifiers such as `1-1`, `1-2`, and `3-2` were retained throughout the spatial and tabular analysis.
 
-![Schematic of the eighteen sub-catchments used as assessment units](docs/images/subcatchment-delineation.png)
+![Eighteen sub-catchments used as assessment units](docs/images/subcatchment-delineation.png)
 
 ### 4. Prepare terrain and thematic layers in ArcGIS
 
 The 18 polygons became the common zone layer for the remaining calculations. The ArcGIS workspace contains separate intermediate products for slope statistics, elevation statistics, precipitation statistics, straight-line and channel lengths, geological intersections, and interpreted loose-material intersections.
+
+![Elevation model of the Meilonggou watershed](docs/images/elevation-model.png)
 
 Key operations included:
 
@@ -67,7 +71,7 @@ Key operations included:
 | `S8` | Lithologic hardness coefficient | Area-weighted hardness calculated after intersecting geological units with sub-catchments |
 | `S9` | Loose-material proportion | Interpreted low-vegetation/loose-material area divided by sub-catchment area |
 
-The unit-level source indicator values are not published because several upstream layers lack recoverable source and redistribution records. The field definitions and calculation logic remain documented here and in [`docs/METHOD.md`](docs/METHOD.md).
+The unit-level source indicator values are not included. The field definitions and calculation logic are documented here and in [`docs/METHOD.md`](docs/METHOD.md).
 
 ### 6. Normalize and evaluate
 
@@ -97,11 +101,9 @@ The final pattern was compared with documented locations affected during the 17 
 
 ## Repository scope and data availability
 
-This repository is a public portfolio record of the thesis. It contains a method summary, author-created schematics, and the final model output. It does not contain the full thesis, personal academic records, raw satellite imagery, Google Earth screenshots or project files, ArcGIS project/geodatabase files, the unit-level indicator table, or third-party terrain, geology, watershed, and precipitation datasets.
+This repository is a public portfolio record of the thesis. It contains a method summary, selected project figures, and the final model output. Raw source datasets, editable Google Earth and ArcGIS project files, and the full thesis are not included.
 
-The thesis acknowledgement records that most raw source data were provided by a senior student for the supervised academic project. The archived files do not document redistribution permission for those layers. The monthly precipitation files can be identified as the *Monthly precipitation data set with 1 km resolution in China from 1960 to 2020* (Qu et al., DOI: `10.11922/sciencedb.01607`, CC BY-NC-ND 4.0), but neither the NetCDF files nor derived unit-level values are redistributed here. The archived 30 m imagery is described in the thesis as Landsat 8, but its product identifiers and download metadata are missing. The DEM, geological layer, and original watershed layer also lack recoverable provider and licence records.
-
-See [`DATA_SOURCES.md`](DATA_SOURCES.md) for the provenance audit and public-release decisions. The full Chinese thesis and additional project materials are available from the author for academic review, subject to the rights of the original data providers.
+Dataset citations and availability are listed in [`DATA_SOURCES.md`](DATA_SOURCES.md). Additional academic materials are available from the author on request.
 
 ## Thesis information
 
