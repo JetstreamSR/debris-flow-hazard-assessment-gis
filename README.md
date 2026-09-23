@@ -4,7 +4,10 @@ Undergraduate thesis project in Geographic Information Science at Southwest Jiao
 
 This project assessed relative debris-flow hazard across 18 sub-catchments in the Meilonggou watershed, Danba County, Sichuan, China. The main work was a practical GIS workflow: inspecting the terrain in Google Earth Pro, delineating and transferring catchment units, organizing multi-source data in ArcGIS, calculating nine spatial indicators, and producing a final hazard map.
 
-![Final debris-flow hazard classification](docs/images/hazard-classification.png)
+<p align="center">
+  <img src="docs/images/hazard-classification.png" alt="Final debris-flow hazard classification" width="720">
+</p>
+<p align="center"><em>Figure 1. Relative debris-flow hazard classification for the 18 Meilonggou assessment units.</em></p>
 
 ## What I did
 
@@ -22,7 +25,10 @@ This project assessed relative debris-flow hazard across 18 sub-catchments in th
 
 Administrative boundaries, satellite imagery, and watershed data were assembled to locate Meilonggou within Danba County. The source layers are not included in this repository.
 
-![Study-area location within Danba County](docs/images/study-area-location.png)
+<p align="center">
+  <img src="docs/images/study-area-location.png" alt="Study-area location within Danba County" width="520">
+</p>
+<p align="center"><em>Figure 2. Location of the Meilonggou watershed within Danba County.</em></p>
 
 ### 2. Extract and visually check the drainage network
 
@@ -32,19 +38,28 @@ The ArcGIS drainage and watershed layers were exported with the **Layer To KML**
 
 Google Earth Pro was used as a visual interpretation and verification environment. Raw imagery and editable project files are not included in this repository.
 
-![Three main gullies reviewed in Google Earth Pro](docs/images/google-earth-gully-review.png)
+<p align="center">
+  <img src="docs/images/google-earth-gully-review.png" alt="Three main gullies reviewed in Google Earth Pro" width="720">
+</p>
+<p align="center"><em>Figure 3. Google Earth Pro 3D view used to review the positions and terrain context of gullies 1, 2, and 3.</em></p>
 
 ### 3. Delineate 18 sub-catchments and return them to ArcGIS
 
 Each main gully was subdivided to identify more precise assessment units. The interpreted polygons were saved as KMZ, imported with **KML To Layer**, converted to geodatabase feature classes, and checked as a single 18-feature polygon layer. Unit identifiers such as `1-1`, `1-2`, and `3-2` were retained throughout the spatial and tabular analysis.
 
-![Eighteen sub-catchments used as assessment units](docs/images/subcatchment-delineation.png)
+<p align="center">
+  <img src="docs/images/subcatchment-delineation.png" alt="Eighteen sub-catchments used as assessment units" width="520">
+</p>
+<p align="center"><em>Figure 4. Eighteen sub-catchments delineated as assessment units.</em></p>
 
 ### 4. Prepare terrain and thematic layers in ArcGIS
 
 The 18 polygons became the common zone layer for the remaining calculations. The ArcGIS workspace contains separate intermediate products for slope statistics, elevation statistics, precipitation statistics, straight-line and channel lengths, geological intersections, and interpreted loose-material intersections.
 
-![Elevation model of the Meilonggou watershed](docs/images/elevation-model.png)
+<p align="center">
+  <img src="docs/images/elevation-model.png" alt="Elevation model of the Meilonggou watershed" width="520">
+</p>
+<p align="center"><em>Figure 5. Digital elevation model used to derive terrain indicators for the Meilonggou watershed.</em></p>
 
 Key operations included:
 
